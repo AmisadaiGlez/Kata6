@@ -1,10 +1,9 @@
-
 package kata6.Modelo;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import static javafx.scene.input.KeyCode.T;
+
 
 public class Histogram<T> {
     

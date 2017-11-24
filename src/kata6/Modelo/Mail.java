@@ -17,8 +17,4 @@ public class Mail {
     public String getMail() {
         return mail;
     }
-    /*public String getDomain() {
-        String[] res = mail.split("@");
-        return res[1];
-    }*/
 }

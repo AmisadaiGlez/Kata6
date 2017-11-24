@@ -3,7 +3,6 @@ package kata6.Vista;
 import java.util.List;
 import kata6.Controlador.Attribute;
 import kata6.Modelo.Histogram;
-import kata6.Modelo.Mail;
 
 
 public class HistogramBuilder<T> {
