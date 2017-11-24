@@ -9,17 +9,18 @@ import java.util.ArrayList;
 import java.util.List;
 import kata6.Modelo.Mail;
 
-public class MailListReader {
+public class FileListReader {
     
     public static List<Mail> read(String fileName) throws FileNotFoundException, IOException {
         List<Mail> mailList= new ArrayList<>();
-        BufferedReader reader = new BufferedReader(new FileReader(new File(fileName)));
-        String mail="";
-        while(((mail = reader.readLine()) != null)) {
-            if(!mail.contains("@")) continue;
-            mailList.add(new Mail(mail));
+        Integer id = 0;
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File(fileName)))) {
+            String mail;
+            while(((mail = reader.readLine()) != null)) {
+                if(!mail.contains("@")) continue;
+                mailList.add(new Mail(id++,mail));
+            }
         }
-        reader.close();
         return mailList;
     }
     
